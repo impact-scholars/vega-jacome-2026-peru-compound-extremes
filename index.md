@@ -5,6 +5,10 @@ abstract: |
  
 acknowledgments: |
     This work was supported by the Impact Scholars Program. We acknowledge the contributions of Nkongho Ayuketang Arreyndip, and Viviana Greco. 
+data_availability: |
+    Published via [Impact Scholars](https://github.com/impact-scholars/vega-jacome-2026-peru-compound-extremes); original [development repository](https://gin.g-node.org/Las-Ninas/CFDHW_Peru).
+options:
+  breakable_figures: true
 ---
 
 # Introduction 
@@ -16,12 +20,12 @@ Compound climate events are defined as combinations of multiple drivers and/or h
 Peru, located in the central and western region of South America, extends from 0°02' N to 18°21' S in latitude and 81°19' W to 68°39' W in longitude. From east to west, the Andes divide the territory into a desert coastal region to the west and the Amazon basin to the east, with elevations ranging from sea level to 6,768 m at Huascarán glacier. The complex topography of Andes induces strong hydroclimatic variability across multiple spatial and temporal scales (@Arias2021; @Espinoza2015; @LavadoCasimiro2012). Due to its complex hydroclimatology, precipitation distribution varies significantly both latitudinally (north-south) and longitudinally (east-west), shaping diverse climatic conditions. These range from the arid and warm coastal region to the temperate, frigid, and polar inter-Andean valleys, and the warm and humid Amazon rainforest.
 
 ## Data
-To identify heatwaves and flash droughts, we used high-resolution gridded long-term historical daily climate data from 1981 to 2015, including precipitation, maximum and minimum temperature, and potential evapotranspiration data (Table 1). Since the variables were obtained at different spatial resolutions, regridding and clipping were performed to standardize the grid resolution and the spatial extent. Additionally, a shape file of the country was applied to exclude data outside Peruvian territory.
+To identify heatwaves and flash droughts, we used high-resolution gridded long-term historical daily climate data from 1981 to 2015, including precipitation, maximum and minimum temperature, and potential evapotranspiration data ([](#tbl-my-table)). Since the variables were obtained at different spatial resolutions, regridding and clipping were performed to standardize the grid resolution and the spatial extent. Additionally, a shape file of the country was applied to exclude data outside Peruvian territory.
 
 ## Methodology and Tools
 First, heatwaves and flash droughts were identified separately at a comparable timescale. Heatwaves were detected using a joint Tmax and Tmin criterion, where both must exceed the corresponding 90th percentile of the reference period (1981–2010), with the default detection based on 5-day rolling means, and such an event must last for at least 3 consecutive days (@Fu2022). 
 
-```{raw} typst
+```{raw:typst}
 #pagebreak()
 #show figure.where(kind: "table"): set figure.caption(position: top)
 ```
@@ -85,7 +89,7 @@ $$\mathrm{Severity}_{CFDHW} = - \sum_{d} \left( \mathrm{SPEI}_{\mathrm{pentad},d
 
 $$T'_{\max} = \left( T_{\max} - T_{25p} \right) \cdot \left( T_{75p} - T_{25p} \right)^{-1}$$
 
-Heatwave severity is the cumulative exceedance of smoothed maximum temperature above its 90th percentile threshold; flash drought severity is the cumulative deficit of pentad-SPEI below the 40th percentile; an empirical compound intensity index over the overlap window, proposed by Alizadeh et al. (2023), was used as a proxy to compound event severity during the overlap period between heatwaves and flash droughts. Although this indicator has some limitations in terms of physical interpretability, it provides a useful approximation of the overall intensity of compound events. 
+Heatwave severity is the cumulative exceedance of smoothed maximum temperature above its 90th percentile threshold; flash drought severity is the cumulative deficit of pentad-SPEI below the 40th percentile; an empirical compound intensity index over the overlap window, proposed by @Alizadeh2020, was used as a proxy to compound event severity during the overlap period between heatwaves and flash droughts. Although this indicator has some limitations in terms of physical interpretability, it provides a useful approximation of the overall intensity of compound events. 
 
 # Result
 The spatial patterns of extreme climate events revealed clear geographic contrasts across Peru (@figure-main c). Heatwaves were more frequent and had longer durations along the coast. In the northern Amazon basin, although the heatwaves were frequent, their durations were much shorter than in the coastal regions. This suggests persistent and recurrent thermal stress in these areas, likely influenced by arid coastal conditions and ocean–atmosphere interactions. In contrast, the Andes region (highlands) exhibited comparatively fewer and shorter heatwaves., This may reflect the combined influence of elevation, complex topography, and high-altitude climate conditionsThis  which could be explained by the regulating effect of the high altitudes and the glaciers on the minimum temperatures. Flash droughts displayed a broader and more spatially uniform pattern than heatwaves, with higher frequency along the Pacific and Titicaca basin, and higher durations mainly in the center and the south of the Pacific basin. Flash droughts lasted substantially longer (16–26 days) than heatwaves (3–17 days), indicating sustained moisture deficits once drought conditions are triggered. The southern regions, already prone to water scarcity, were especially vulnerable to repeated drought stress. Compound FDHW events, defined by the co-occurrence of heatwaves and flash droughts, were less frequent overall, but displayed clustering in coastal and parts of the north Amazon basin of Peru. In central Peru, compound events lasted longer but occurred less frequently compared to other parts of Peru.
@@ -96,7 +100,7 @@ The spatial patterns of extreme climate events revealed clear geographic contras
 :alt: Compound flash droughts and heatwaves in Peru (1981–2015)
 Compound flash droughts and heatwaves across major hydrological basins in Peru (1981–2015).
 \
-**a.** Example detection of a compound event at a single pixel during 1998, showing daily maximum and minimum temperatures smoothed using a moving window of 5 days (top) and daily pentad-SPEI (bottom). Heatwaves (red shading) and flash droughts (brown shading) are detected using the respective thresholds expressed as the N-th percentiles (horizontal lines) in accordance with Fu & Wang (2022); compound events (purple hatched shading) are periods of temporal overlap between concurrent heatwave and flash drought events.
+**a.** Example detection of a compound event at a single pixel during 1998, showing daily maximum and minimum temperatures smoothed using a moving window of 5 days (top) and daily pentad-SPEI (bottom). Heatwaves (red shading) and flash droughts (brown shading) are detected using the respective thresholds expressed as the N-th percentiles (horizontal lines) in accordance with @Fu2022; compound events (purple hatched shading) are periods of temporal overlap between concurrent heatwave and flash drought events.
 \
 **b.** Annual maximum severity of heatwaves (top, red), flash droughts (middle, brown; y-axis inverted because the severity values are negative), and compound events (bottom, purple) across Peru over the study period.
 \
