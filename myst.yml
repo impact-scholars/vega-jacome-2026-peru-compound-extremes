@@ -4,15 +4,77 @@ extends:
 - https://raw.githubusercontent.com/impact-scholars/isp-actions-config/v0.2.0/isp-micropublication-2025.yml
 
 project:
-  authors: []
+  authors:
+  - name: Fiorella Vega-Jácome
+    orcid: https://orcid.org/0000-0003-4580-9324
+    corresponding: true
+    email: fiorevegi@gmail.com
+    affiliations:
+    - Institute of Environmental Science and Geography, University of Potsdam, Potsdam, Germany
+    roles:
+    - Conceptualization
+    - Data curation
+    - Formal analysis
+    - Investigation
+    - Methodology
+    - Project administration
+    - Software
+    - Resources
+    - Validation
+    - Visualization
+    - Writing - original draft
+    - Writing - review & editing
+
+  - name: Manjari Singh
+    orcid: https://orcid.org/0000-0001-5364-2056
+    corresponding: true
+    email: manjari07.07@gmail.com
+    affiliations:
+    - Alliance Bioversity-CIAT
+    roles:
+    - Conceptualization
+    - Data curation
+    - Formal analysis
+    - Investigation
+    - Methodology
+    - Project administration
+    - Software
+    - Resources
+    - Validation
+    - Visualization
+    - Writing - original draft
+    - Writing - review & editing
+
+  - name: Jiameng Wu
+    orcid: https://orcid.org/0000-0002-6266-7666
+    corresponding: true
+    email: jiameng.wu@gmail.com
+    affiliations:
+    - Institute for Biology, Humboldt University of Berlin, Germany
+    roles:
+    - Conceptualization
+    - Data curation
+    - Formal analysis
+    - Investigation
+    - Methodology
+    - Project administration
+    - Software
+    - Resources
+    - Validation
+    - Visualization
+    - Writing - original draft
+    - Writing - review & editing
+
   toc:
   - file: index.md
-  id:
-  title:
-  keywords: []
-  github:
+
+  id: isp-vega-jacome-2026-peru-compound-extremes
+  title: Characteristics of historical Compound Flash Droughts and Heatwaves in Peru during 1981-2015
+  keywords:
+  - Compound flash drought and heatwave events
+  - climate variability
+  - Extreme events
+  - Peru
+  github: https://github.com/impact-scholars/vega-jacome-2026-peru-compound-extremes
   bibliography:
   - bib.bib
-
-site:
-  template: https://raw.githubusercontent.com/impact-scholars/myst-theme/v0.2.0/.deploy/book/template.yml
